@@ -1,0 +1,39 @@
+{
+  "id": "adr:0900",
+  "number": 900,
+  "slug": "cache-freshness-standards-targets-reviewed-before-inclusion",
+  "title": "Cache/freshness standards targets are reviewed before governance inclusion",
+  "status": "accepted",
+  "origin": "cache-freshness-governance-pack",
+  "decision_date": "2026-05-07",
+  "supersedes": [],
+  "superseded_by": [],
+  "status_notes": [
+    "Initial pack scaffold ADR. Final downstream governance rows are intentionally deferred until the standards target inventory is reviewed."
+  ],
+  "context": [
+    "HTTP caching and freshness governance spans core HTTP semantics, HTTP caching, validators, conditional requests, stale response controls, targeted cache directives, CDN cache fields, cache diagnostics, cache grouping, structured field parsing, and IANA registries.",
+    "The pack must not prematurely encode broad RFC coverage as normative ADR/SPEC commitments before the target set is reviewed and scoped."
+  ],
+  "decision": [
+    "This pack starts with a standards-target review phase.",
+    "Candidate RFC, IETF, and IANA targets are listed in docs/standards/cache-freshness-rfc-ietf-targets.md.",
+    "Only reviewed targets will be promoted into durable ADRs and SPECs.",
+    "Historical or superseded RFCs remain available as context but must not outrank current RFCs when the current RFC explicitly obsoletes them."
+  ],
+  "consequences": [
+    "The first publishable pack can ship a seed review contract without implying every candidate standard is already in scope.",
+    "Future ADRs and SPECs can be split by cache/freshness surface: core HTTP cache model, validators, cache directives, stale controls, CDN targeted controls, diagnostics, cache groups, and supporting syntax registries.",
+    "Downstream projects can consume the seed documents while still making explicit inclusion decisions."
+  ],
+  "references": [
+    "RFC 9110 HTTP Semantics",
+    "RFC 9111 HTTP Caching",
+    "RFC 5861 HTTP Cache-Control Extensions for Stale Content",
+    "RFC 8246 HTTP Immutable Responses",
+    "RFC 9211 The Cache-Status HTTP Response Header Field",
+    "RFC 9213 Targeted HTTP Cache Control",
+    "RFC 9875 HTTP Cache Groups",
+    "RFC 9651 Structured Field Values for HTTP"
+  ]
+}
