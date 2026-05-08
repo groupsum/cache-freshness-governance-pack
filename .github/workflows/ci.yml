@@ -23,10 +23,19 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      - uses: cobycloud/actions/actions/uv-monorepo-ci@main
+      - uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - uses: actions/setup-python@v6
         with:
           python-version: ${{ matrix.python-version }}
-          package-path: "."
-          install-command: uv sync --all-groups
-          compile-command: uv run python -m compileall src tests
-          test-command: uv run python -m unittest discover -s tests -v
+
+      - name: Install package
+        run: uv sync --all-groups
+
+      - name: Compile package
+        run: uv run python -m compileall src tests
+
+      - name: Run unit tests
+        run: uv run python -m unittest discover -s tests -v
