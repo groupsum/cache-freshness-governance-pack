@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Pending release notes.
+
 ## 0.1.0
 
 - Create the local SSOT extension-pack scaffold for cache/freshness governance.
