@@ -11,7 +11,7 @@
     "reservation_owner": "cache-freshness-governance-pack",
     "immutable": true,
     "minimum_schema_version": 4,
-    "introduced_in": "0.1.2.dev1",
+    "introduced_in": "0.1.2",
     "status": "accepted",
     "supersedes": [],
     "superseded_by": [],
