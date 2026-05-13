@@ -103,24 +103,18 @@ def update_changelog(changelog_path: Path, version: str) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Bump package version metadata.")
     parser.add_argument("--bump", choices=("patch", "minor", "finalize"), required=True)
-    parser.add_argument("--pyproject", default="pyproject.toml")
-    parser.add_argument(
-        "--version-file",
-        default="src/cache_freshness_governance_pack/__init__.py",
-    )
+    parser.add_argument("--pyproject", default="pyproject.toml")
     parser.add_argument("--changelog", default="CHANGELOG.md")
     parser.add_argument("--write", action="store_true")
     args = parser.parse_args()
 
     pyproject_path = Path(args.pyproject)
-    version_file = Path(args.version_file)
     changelog_path = Path(args.changelog)
 
     current = read_project_version(pyproject_path)
     bumped = bump_version(current, args.bump)
     if args.write:
         replace_pyproject_version(pyproject_path, bumped)
-        replace_dunder_version(version_file, bumped)
         update_changelog(changelog_path, bumped)
     print(bumped)
     return 0
