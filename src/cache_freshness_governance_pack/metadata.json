@@ -1,0 +1,32 @@
+{
+    "schema_version":  "1.0.0",
+    "ssot_package_name":  "cache-freshness-governance-pack",
+    "origin":  {
+                   "id":  "pack:cache-freshness-governance",
+                   "package_name":  "cache-freshness-governance-pack",
+                   "import_name":  "cache_freshness_governance_pack",
+                   "kind":  "governance-pack",
+                   "title":  "Cache Freshness Governance Pack",
+                   "description":  "Installable SSOT governance pack for HTTP caching and freshness governance documents.",
+                   "homepage":  "https://github.com/groupsum/cache-freshness-governance-pack",
+                   "repository":  "https://github.com/groupsum/cache-freshness-governance-pack"
+               },
+    "compatibility":  {
+                          "python":  ">=3.10,<3.15",
+                          "ssot_registry_schema":  ">=0.4.0",
+                          "ssot_pack_contract":  ">=0.2.17,<0.3.0"
+                      },
+    "trust":  {
+                  "trusted_by_default":  true,
+                  "origin":  "extension-pack",
+                  "reservation_owner":  "extension-pack:cache-freshness-governance-pack"
+              },
+    "documents":  {
+                      "adr":  {
+                                  "manifest_path":  "templates/adr/manifest.json"
+                              },
+                      "spec":  {
+                                   "manifest_path":  "templates/specs/manifest.json"
+                               }
+                  }
+}

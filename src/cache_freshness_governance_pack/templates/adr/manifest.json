@@ -1,22 +1,26 @@
 [
-  {
-    "id": "adr:0900",
-    "number": 900,
-    "slug": "cache-freshness-standards-targets-reviewed-before-inclusion",
-    "title": "Cache/freshness standards targets are reviewed before governance inclusion",
-    "filename": "ADR-0900-cache-freshness-standards-targets-reviewed-before-inclusion.yaml",
-    "target_path": ".ssot/adr/ADR-0900-cache-freshness-standards-targets-reviewed-before-inclusion.yaml",
-    "sha256": "549e9ed96a650e8c0565964d002b8d89b126c1c2e972e8797636136e5a888f85",
-    "origin": "cache-freshness-governance-pack",
-    "reservation_owner": "cache-freshness-governance-pack",
-    "immutable": true,
-    "minimum_schema_version": 4,
-    "introduced_in": "0.1.2",
-    "status": "accepted",
-    "supersedes": [],
-    "superseded_by": [],
-    "status_notes": [
-      "Initial pack scaffold ADR. Final downstream governance rows are intentionally deferred until the standards target inventory is reviewed."
-    ]
-  }
+{
+    "id":  "adr:0900",
+    "number":  900,
+    "slug":  "cache-freshness-standards-targets-reviewed-before-inclusion",
+    "title":  "Cache/freshness standards targets are reviewed before governance inclusion",
+    "filename":  "ADR-0900-cache-freshness-standards-targets-reviewed-before-inclusion.yaml",
+    "target_path":  ".ssot/adr/ADR-0900-cache-freshness-standards-targets-reviewed-before-inclusion.yaml",
+    "sha256":  "549e9ed96a650e8c0565964d002b8d89b126c1c2e972e8797636136e5a888f85",
+    "origin":  "extension-pack",
+    "reservation_owner":  "extension-pack:cache-freshness-governance-pack",
+    "immutable":  true,
+    "minimum_schema_version":  "4",
+    "introduced_in":  "0.1.2",
+    "status":  "accepted",
+    "supersedes":  [
+
+                   ],
+    "superseded_by":  [
+
+                      ],
+    "status_notes":  [
+
+                     ]
+}
 ]
