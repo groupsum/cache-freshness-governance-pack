@@ -1,27 +1,21 @@
 [
-{
-    "id":  "spc:0900",
-    "number":  900,
-    "slug":  "cache-freshness-governance-target-review",
-    "title":  "Cache/freshness governance target review",
-    "filename":  "SPEC-0900-cache-freshness-governance-target-review.yaml",
-    "target_path":  ".ssot/specs/SPEC-0900-cache-freshness-governance-target-review.yaml",
-    "sha256":  "641a9e9562ab1b24570791d40352c0d6fec4eacdc648e6907626ae3db61b2fc5",
-    "origin":  "extension-pack",
-    "reservation_owner":  "extension-pack:cache-freshness-governance-pack",
-    "immutable":  true,
-    "minimum_schema_version":  "4",
-    "introduced_in":  "0.1.2",
-    "status":  "accepted",
-    "supersedes":  [
-
-                   ],
-    "superseded_by":  [
-
-                      ],
-    "status_notes":  [
-
-                     ],
-    "kind":  "normative"
-}
+  {
+    "id": "spc:0900",
+    "number": 900,
+    "slug": "cache-freshness-governance-target-review",
+    "title": "Cache/freshness governance target review",
+    "filename": "SPEC-0900-cache-freshness-governance-target-review.yaml",
+    "target_path": ".ssot/specs/SPEC-0900-cache-freshness-governance-target-review.yaml",
+    "sha256": "641a9e9562ab1b24570791d40352c0d6fec4eacdc648e6907626ae3db61b2fc5",
+    "origin": "extension-pack",
+    "reservation_owner": "extension-pack:cache-freshness-governance-pack",
+    "immutable": true,
+    "minimum_schema_version": "0.4.0",
+    "introduced_in": "0.1.2",
+    "status": "accepted",
+    "supersedes": [],
+    "superseded_by": [],
+    "status_notes": [],
+    "kind": "normative"
+  }
 ]
