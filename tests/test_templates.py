@@ -74,14 +74,14 @@ class TemplateManifestTests(unittest.TestCase):
         self.assertEqual("cache-freshness-governance-pack", manifest["metadata"]["origin"]["package_name"])
         self.assertIn("adr", manifest["documents"])
         self.assertIn("spec", manifest["documents"])
-        self.assertEqual("adr:0900", get_packaged_document_entry("adr:0900")["id"])
+        self.assertEqual("adr:cache-freshness-standards-targets-reviewed-before-inclusion", get_packaged_document_entry("adr:cache-freshness-standards-targets-reviewed-before-inclusion")["id"])
         self.assertEqual(2, len(list_packaged_document_ids()))
     def test_adr_manifest_has_expected_rows(self) -> None:
         manifest = load_document_manifest("adr")
         self.assertEqual(1, len(manifest))
         self.assertEqual(
             [
-                "adr:0900",
+                "adr:cache-freshness-standards-targets-reviewed-before-inclusion",
             ],
             [row["id"] for row in manifest],
         )
@@ -91,7 +91,7 @@ class TemplateManifestTests(unittest.TestCase):
         self.assertEqual(1, len(manifest))
         self.assertEqual(
             [
-                "spc:0900",
+                "spc:cache-freshness-governance-target-review",
             ],
             [row["id"] for row in manifest],
         )
@@ -99,13 +99,13 @@ class TemplateManifestTests(unittest.TestCase):
     def test_packaged_document_can_be_loaded(self) -> None:
         text = read_packaged_document_text("spec", "SPEC-0900-cache-freshness-governance-target-review.yaml")
         payload = json.loads(text)
-        self.assertEqual("spc:0900", payload["id"])
+        self.assertEqual("spc:cache-freshness-governance-target-review", payload["id"])
         self.assertEqual("normative", payload["spec_kind"])
 
     def test_packaged_adr_can_be_loaded(self) -> None:
         text = read_packaged_document_text("adr", "ADR-0900-cache-freshness-standards-targets-reviewed-before-inclusion.yaml")
         payload = json.loads(text)
-        self.assertEqual("adr:0900", payload["id"])
+        self.assertEqual("adr:cache-freshness-standards-targets-reviewed-before-inclusion", payload["id"])
         self.assertEqual(
             "Cache/freshness standards targets are reviewed before governance inclusion",
             payload["title"],
@@ -114,7 +114,7 @@ class TemplateManifestTests(unittest.TestCase):
     def test_packaged_spec_can_be_loaded(self) -> None:
         text = read_packaged_document_text("spec", "SPEC-0900-cache-freshness-governance-target-review.yaml")
         payload = json.loads(text)
-        self.assertEqual("spc:0900", payload["id"])
+        self.assertEqual("spc:cache-freshness-governance-target-review", payload["id"])
         self.assertEqual("normative", payload["spec_kind"])
 
     def test_packaged_documents_use_only_canonical_fields(self) -> None:

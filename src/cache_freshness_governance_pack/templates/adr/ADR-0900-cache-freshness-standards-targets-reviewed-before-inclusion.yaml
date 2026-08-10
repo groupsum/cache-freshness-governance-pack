@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "kind": "adr",
-  "id": "adr:0900",
+  "id": "adr:cache-freshness-standards-targets-reviewed-before-inclusion",
   "number": 900,
   "slug": "cache-freshness-standards-targets-reviewed-before-inclusion",
   "title": "Cache/freshness standards targets are reviewed before governance inclusion",

@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "kind": "spec",
-  "id": "spc:0900",
+  "id": "spc:cache-freshness-governance-target-review",
   "number": 900,
   "slug": "cache-freshness-governance-target-review",
   "title": "Cache/freshness governance target review",
@@ -19,6 +19,6 @@
   "body": "## Scope\n\n- HTTP caching and freshness standards target discovery\n- ADR/SPEC inclusion triage\n- candidate status labeling as core, supporting, historical, watchlist, or excluded\n\n## Requirements\n\n- CFGP-0900-001: The pack SHALL maintain a standards target inventory before creating detailed cache/freshness ADRs and SPECs.\n- CFGP-0900-002: The inventory SHALL distinguish current core RFC targets from supporting syntax/registry targets and historical superseded RFCs.\n- CFGP-0900-003: The inventory SHALL identify non-IETF or vendor-specific cache surfaces as watchlist or out-of-scope unless explicitly accepted by a later ADR.\n- CFGP-0900-004: Future normative SPECs SHALL cite the current RFC target when an older RFC has been obsoleted.\n- CFGP-0900-005: Future SPEC rows SHOULD be split by governed behavior surface rather than by vendor implementation.\n\n## Candidate Behavior Surfaces\n\n- freshness calculation\n- cacheability and storage\n- cache keys and representation selection\n- validators and conditional requests\n- ETag and Last-Modified governance\n- Cache-Control and Expires policy\n- stale-while-revalidate and stale-if-error\n- immutable responses\n- shared cache and CDN-targeted directives\n- cache diagnostics and Cache-Status\n- cache grouping and invalidation\n- structured field parsing for cache extensions\n\n## Review Artifact\n\ndocs/standards/cache-freshness-rfc-ietf-targets.md\n",
   "spec_kind": "normative",
   "adr_ids": [
-    "adr:0900"
+    "adr:cache-freshness-standards-targets-reviewed-before-inclusion"
   ]
 }

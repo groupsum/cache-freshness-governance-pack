@@ -17,6 +17,8 @@
 
 </div>
 
+The seed ADR and SPEC use globally unique cache/freshness document IDs so they can be installed with the complete governance portfolio.
+
 `cache-freshness-governance-pack` is an SSOT Registry pack for HTTP caching, freshness, validators, cache directives, stale response behavior, targeted cache policy, and CDN-facing cache governance.
 
 It gives product, platform, reliability, and edge-delivery teams a shared set of Architecture Decision Records (ADRs) and Specifications (SPECs) for cache behavior. Centralizing these requirements lets teams apply the same freshness and caching decisions across many services, APIs, sites, and CDNs while keeping local implementation work traceable to reviewed standards.

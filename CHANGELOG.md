@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0.dev1
+
+- Replaced generic seed document IDs with globally unique cache/freshness IDs.
+
 ## 0.1.4.dev1
 
 - Pending release notes.
