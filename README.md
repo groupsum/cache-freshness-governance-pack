@@ -1,143 +1,308 @@
-<div align="center">
+# cache-freshness-governance-pack
 
-<h1>cache-freshness-governance-pack</h1>
-
-<p>
-  <a href="https://pypi.org/project/cache-freshness-governance-pack/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/cache-freshness-governance-pack.svg"></a>
-  <a href="https://pepy.tech/projects/cache-freshness-governance-pack"><img alt="Downloads" src="https://static.pepy.tech/badge/cache-freshness-governance-pack"></a>
-  <a href="https://hits.sh/github.com/groupsum/cache-freshness-governance-pack/"><img alt="Hits" src="https://hits.sh/github.com/groupsum/cache-freshness-governance-pack.svg"></a>
-  <a href="https://pypi.org/project/cache-freshness-governance-pack/"><img alt="Python versions" src="https://img.shields.io/pypi/pyversions/cache-freshness-governance-pack.svg"></a>
-  <a href="https://github.com/groupsum/cache-freshness-governance-pack/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/pypi/l/cache-freshness-governance-pack.svg"></a>
-  <a href="https://github.com/groupsum/cache-freshness-governance-pack/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/groupsum/cache-freshness-governance-pack/actions/workflows/ci.yml/badge.svg?branch=master"></a>
+<!-- readme-standards:begin branding -->
+<p align="center"><a href="https://github.com/groupsum/readme-standards"><img src="https://raw.githubusercontent.com/groupsum/readme-standards/master/docs/assets/readme-standards.svg" alt="Groupsum README Standards" width="300"></a></p>
+<p align="center"><strong>cache-freshness-governance-pack</strong></p>
+<p align="center">Installable ADR and SPEC extension pack for HTTP caching and freshness governance.</p>
+<p align="center">
+<a href="https://pypi.org/project/cache-freshness-governance-pack/"><img alt="pypi: cache-freshness-governance-pack" src="https://img.shields.io/pypi/v/cache-freshness-governance-pack?labelColor=1E293B&amp;color=1D4ED8"></a>
+<a href="https://github.com/groupsum/cache-freshness-governance-pack/blob/master/pyproject.toml"><img alt="Source version: 0.2.0.dev1" src="https://img.shields.io/static/v1?label=Source%20version&amp;message=0.2.0.dev1&amp;labelColor=1E293B&amp;color=4338CA"></a>
+<a href="https://github.com/groupsum/cache-freshness-governance-pack/blob/master/pyproject.toml"><img alt="Python: &gt;=3.10,&lt;3.15" src="https://img.shields.io/static/v1?label=Python&amp;message=%3E%3D3.10%2C%3C3.15&amp;labelColor=1E293B&amp;color=0F766E"></a>
+<a href="https://github.com/groupsum/cache-freshness-governance-pack/blob/master/pyproject.toml"><img alt="Layer: governance" src="https://img.shields.io/static/v1?label=Layer&amp;message=governance&amp;labelColor=1E293B&amp;color=6D28D9"></a>
+<a href="https://github.com/groupsum/cache-freshness-governance-pack/blob/master/README.md#lifecycle-and-migration"><img alt="Lifecycle: active" src="https://img.shields.io/static/v1?label=Lifecycle&amp;message=active&amp;labelColor=1E293B&amp;color=166534"></a>
+<a href="https://github.com/groupsum/cache-freshness-governance-pack/blob/master/LICENSE"><img alt="License: Apache-2.0" src="https://img.shields.io/static/v1?label=License&amp;message=Apache-2.0&amp;labelColor=1E293B&amp;color=86198F"></a>
+<a href="https://github.com/groupsum/cache-freshness-governance-pack/blob/master/README.md#notices"><img alt="Notice: not required" src="https://img.shields.io/static/v1?label=Notice&amp;message=not%20required&amp;labelColor=1E293B&amp;color=475569"></a>
 </p>
-
-<p>
-  <a href="https://github.com/groupsum/cache-freshness-governance-pack"><img alt="GitHub repo" src="https://img.shields.io/badge/GitHub-groupsum%2Fcache--freshness--governance--pack-181717?logo=github"></a>
+<p align="center">
+<a href="https://pypi.org/project/cache-freshness-governance-pack/"><img alt="Monthly PyPI downloads: cache-freshness-governance-pack" src="https://img.shields.io/pypi/dm/cache-freshness-governance-pack?labelColor=1E293B&amp;color=0E7490"></a>
+<a href="https://github.com/groupsum/cache-freshness-governance-pack/blob/master/README.md"><img alt="README hits: cache-freshness-governance-pack" src="https://hits.sh/github.com/groupsum/cache-freshness-governance-pack/README.md.svg?label=README%20hits&amp;labelColor=1E293B&amp;color=0E7490"></a>
 </p>
+<p align="center">
+<a href="https://github.com/groupsum/cache-freshness-governance-pack/actions/workflows/readme-standards.yml"><img alt="README standards: CI gate" src="https://img.shields.io/static/v1?label=README%20standards&amp;message=CI%20gate&amp;labelColor=1E293B&amp;color=1D4ED8"></a>
+<a href="https://github.com/groupsum/cache-freshness-governance-pack/actions/workflows/readme-standards.yml"><img alt="Tests: package and example checks" src="https://img.shields.io/static/v1?label=Tests&amp;message=package%20and%20example%20checks&amp;labelColor=1E293B&amp;color=0F766E"></a>
+<a href="https://github.com/groupsum/cache-freshness-governance-pack/blob/master/README.md#certification-status"><img alt="Certification: not certified" src="https://img.shields.io/static/v1?label=Certification&amp;message=not%20certified&amp;labelColor=1E293B&amp;color=92400E"></a>
+<a href="https://github.com/groupsum/cache-freshness-governance-pack/blob/master/docs/standards/cache-freshness-rfc-ietf-targets.md"><img alt="Governance: pack governance" src="https://img.shields.io/static/v1?label=Governance&amp;message=pack%20governance&amp;labelColor=1E293B&amp;color=4338CA"></a>
+<a href="https://github.com/groupsum/cache-freshness-governance-pack/actions/workflows/readme-standards.yml"><img alt="Evidence: README and wheel checks" src="https://img.shields.io/static/v1?label=Evidence&amp;message=README%20and%20wheel%20checks&amp;labelColor=1E293B&amp;color=6D28D9"></a>
+</p>
+<p align="center"><a href="#overview">Overview</a> · <a href="#installation">Installation</a> · <a href="#quick-start">Quick Start</a> · <a href="#usage">Usage</a> · <a href="#public-api-and-import-surfaces">API</a> · <a href="#contributing">Contributing</a> · <a href="#governance">Governance</a> · <a href="#license">License</a></p>
+<!-- readme-standards:end branding -->
 
-</div>
+---
 
-The seed ADR and SPEC use globally unique cache/freshness document IDs so they can be installed with the complete governance portfolio.
+## Overview
 
-`cache-freshness-governance-pack` is an SSOT Registry pack for HTTP caching, freshness, validators, cache directives, stale response behavior, targeted cache policy, and CDN-facing cache governance.
+### Summary
 
-It gives product, platform, reliability, and edge-delivery teams a shared set of Architecture Decision Records (ADRs) and Specifications (SPECs) for cache behavior. Centralizing these requirements lets teams apply the same freshness and caching decisions across many services, APIs, sites, and CDNs while keeping local implementation work traceable to reviewed standards.
+Installable SSOT governance pack for HTTP caching and freshness governance documents.
 
-## What Is An SSOT Registry Pack?
+### Why This Package
 
-An SSOT Registry pack is an installable package of governed ADRs and SPECs for [`ssot-registry`](https://pypi.org/project/ssot-registry/). The pack supplies reusable decision and requirement documents. `ssot-registry` applies those documents to a project registry so teams can trace product requirements from decision, to specification, to implementation, to tests and release evidence.
+The pack supplies versioned, source-linked ADR and SPEC templates for Cache Freshness Governance Pack.
 
-This makes governance portable. A project can adopt the pack, synchronize the documents, list the active requirements, and connect local features or tests to the shared IDs.
+### When to Use
 
-## Why This Pack Exists
+Use this pack when a downstream SSOT Registry needs reusable decisions and requirements for Cache Freshness Governance Pack.
 
-Caching looks simple until products need predictable freshness, validator behavior, stale response policy, CDN-specific directives, cache observability, and consistent release review. The same `Cache-Control` or `ETag` mistake can create stale pages, overloaded origins, broken rollback paths, misleading CDN behavior, and confusing customer experiences.
+### Features
 
-This pack helps teams:
+**Included ADRs**
 
-- apply reviewed HTTP caching and freshness requirements across projects
-- align origin, shared cache, browser, and CDN behavior around the same governed IDs
-- turn RFC and IETF review into reusable ADRs and SPECs
-- connect cache policy decisions to implementation, tests, and release evidence
-- make edge-delivery reviews more consistent for APIs, web apps, static assets, and content platforms
+- [`adr:cache-freshness-standards-targets-reviewed-before-inclusion`](https://github.com/groupsum/cache-freshness-governance-pack/blob/master/src/cache_freshness_governance_pack/templates/adr/ADR-0900-cache-freshness-standards-targets-reviewed-before-inclusion.yaml) — Cache/freshness standards targets are reviewed before governance inclusion
 
-## Domain Focus
+**Included SPECs**
 
-The pack focuses on product and platform domains where cache behavior affects correctness, performance, reliability, and user trust:
+- [`spc:cache-freshness-governance-target-review`](https://github.com/groupsum/cache-freshness-governance-pack/blob/master/src/cache_freshness_governance_pack/templates/specs/SPEC-0900-cache-freshness-governance-target-review.yaml) — Cache/freshness governance target review
 
-- HTTP cache policy for sites, APIs, and service responses
-- freshness calculation, max-age policy, and expiry behavior
-- validators such as `ETag`, `Last-Modified`, and conditional requests
-- `Cache-Control`, `Expires`, `Age`, and `Vary` governance
-- stale response controls such as `stale-while-revalidate` and `stale-if-error`
-- immutable/versioned asset response policy
-- targeted cache control and `CDN-Cache-Control`
-- cache diagnostics through `Cache-Status`
-- cache grouping and invalidation requirements
-- structured field syntax for cache extensions
-- IETF, RFC, and IANA registry target review for cache/freshness surfaces
+### Non-Goals
 
-## Included ADRs
+The pack supplies governance records. A downstream application implements the controls and collects its own conformance evidence.
 
-- `adr:0900` cache/freshness standards targets are reviewed before governance inclusion
+---
 
-## Included SPECs
+## Getting Started
 
-- `spc:0900` cache/freshness governance target review
+### Prerequisites
 
-## Standards Review Targets
+Use Python `>=3.10,<3.15`. Downstream synchronization also requires SSOT Registry and permission to write the target registry.
 
-The first release includes a standards target inventory for cache/freshness review. It covers current core candidates, supporting candidates, historical/superseded context, and non-IETF watchlist items. Review the inventory on GitHub:
+### Installation
 
-[Cache/Freshness RFC and IETF Target Inventory](https://github.com/groupsum/cache-freshness-governance-pack/blob/master/docs/standards/cache-freshness-rfc-ietf-targets.md)
+#### uv
 
-The current review set includes RFC 9111, RFC 9110, RFC 5861, RFC 8246, RFC 9213, RFC 9211, RFC 9875, RFC 9651, and related IANA cache registries.
-
-## Install With uv
-
-Install the pack into a project environment:
-
+<!-- readme-standards:begin installation.uv -->
 ```bash
 uv add cache-freshness-governance-pack
 ```
+<!-- readme-standards:end installation.uv -->
 
-Install it alongside the SSOT Registry CLI:
+#### pip
 
+<!-- readme-standards:begin installation.pip -->
 ```bash
-uv add ssot-registry cache-freshness-governance-pack
+python -m pip install cache-freshness-governance-pack
 ```
+<!-- readme-standards:end installation.pip -->
 
-Run without adding dependencies to a project:
+#### Poetry
 
+<!-- readme-standards:begin installation.poetry -->
 ```bash
-uvx --from ssot-registry --with cache-freshness-governance-pack ssot --help
+poetry add cache-freshness-governance-pack
 ```
+<!-- readme-standards:end installation.poetry -->
 
-## Install With The SSOT Registry Pack CLI
+### Quick Start
 
-Pack-enabled SSOT Registry environments can install and synchronize packs through the pack command surface:
+#### Example
 
-```bash
-uvx --from ssot-registry ssot pack install cache-freshness-governance-pack
-uvx --from ssot-registry ssot pack sync . cache-freshness-governance-pack
-```
-
-## Use With The SSOT Registry CLI
-
-After the pack is installed in the same environment as `ssot-registry`, synchronize ADRs and SPECs into a target repository:
-
-```bash
-uv run ssot adr sync .
-uv run ssot spec sync .
-```
-
-Review the synchronized governance surface:
-
-```bash
-uv run ssot adr list .
-uv run ssot spec list .
-uv run ssot spec get . --id spc:0900
-```
-
-Use the IDs from this pack when linking project features, tests, claims, and release evidence in your local `.ssot` registry.
-
-## Programmatic Usage
+<!-- readme-standards:begin example.quick-start -->
+Source: [examples/quick_start.py](https://github.com/groupsum/cache-freshness-governance-pack/blob/master/examples/quick_start.py).
 
 ```python
+"""Inspect the installed pack identity."""
+
+from cache_freshness_governance_pack import load_pack_metadata
+
+metadata = load_pack_metadata()
+assert metadata["origin"]["id"] == "pack:cache-freshness-governance"
+print(metadata["origin"]["id"])
+```
+<!-- readme-standards:end example.quick-start -->
+
+#### Expected Result
+
+The script prints `pack:cache-freshness-governance` from the installed pack metadata.
+
+---
+
+## Usage
+
+### Common Workflows
+
+<!-- readme-standards:begin example.usage -->
+Source: [examples/usage.py](https://github.com/groupsum/cache-freshness-governance-pack/blob/master/examples/usage.py).
+
+```python
+"""Resolve and read a packaged specification without synchronizing it."""
+
 from cache_freshness_governance_pack import load_document_manifest, read_packaged_document_text
 
-adr_manifest = load_document_manifest("adr")
-spec_manifest = load_document_manifest("spec")
+spec = next(row for row in load_document_manifest("spec") if row["id"] == "spc:cache-freshness-governance-target-review")
+document = read_packaged_document_text("spec", spec["filename"])
+assert spec["id"] in document
+```
+<!-- readme-standards:end example.usage -->
 
-print(adr_manifest[0]["id"])
-print(spec_manifest[0]["id"])
+Use the downstream environment that has both SSOT Registry and `cache-freshness-governance-pack` installed. Inspect the pack and preflight the target registry before approving synchronization.
 
-text = read_packaged_document_text("spec", "SPEC-0900-cache-freshness-governance-target-review.yaml")
-print(text[:120])
+```bash
+uv run ssot pack inspect cache_freshness_governance_pack
+uv run ssot pack preflight . cache_freshness_governance_pack --all
+uv run ssot pack sync . cache_freshness_governance_pack --all --trust --yes
+uv run ssot validate .
 ```
 
-## Resources
+### Configuration
 
-- GitHub repository: [groupsum/cache-freshness-governance-pack](https://github.com/groupsum/cache-freshness-governance-pack)
-- PyPI package: [cache-freshness-governance-pack](https://pypi.org/project/cache-freshness-governance-pack/)
-- SSOT Registry: [ssot-registry](https://pypi.org/project/ssot-registry/)
+Select the installed import package `cache_freshness_governance_pack` in SSOT Registry. Review reservation owner `extension-pack:cache-freshness-governance-pack` and the target's trust policy before syncing.
+
+### Error Handling
+
+If preflight reports a schema, trust, or document-number conflict, resolve it in the target registry and repeat preflight before synchronization.
+
+### Best Practices
+
+Pin the pack version in downstream projects. Reference document IDs in local governance and inspect the change set before granting trust.
+
+---
+
+## Package Boundary
+
+### What It Owns
+
+The pack owns the Cache Freshness Governance Pack ADRs and SPECs listed under Features.
+
+### Public API and Import Surfaces
+
+Import `load_pack_metadata`, `load_document_manifest`, and `read_packaged_document_text` from `cache_freshness_governance_pack` to inspect packaged records.
+
+### Entry Points
+
+<!-- readme-standards:begin entry-points -->
+This package declares no command-line, GUI, or plugin entry points in its manifest.
+<!-- readme-standards:end entry-points -->
+
+### Injected Dependencies
+
+The package binds its metadata and document loaders through `ssot-pack-contracts`. The caller supplies the target registry to SSOT Registry when synchronizing.
+
+### Protocol Consumers
+
+SSOT Registry uses the pack metadata, document manifests, and bundled templates during inspect, preflight, and sync.
+
+### Extensions
+
+Define downstream policies as local records and reference the pack's document IDs. Send proposed changes to the canonical pack through repository review.
+
+---
+
+## Operations and Readiness
+
+### Operational Requirements
+
+Local inspection reads installed package resources. Synchronization requires an initialized downstream registry and explicit operator approval.
+
+### Health and Observability
+
+Review the preflight and sync output, then use `ssot validate` to check the resulting registry.
+
+### Security and Resource Limits
+
+Implicit trust is disabled. Review the exact distribution, version, records, and reserved IDs before enabling trust in a target registry.
+
+### Compatibility
+
+- Python `>=3.10,<3.15`
+- SSOT Registry schema `>=0.4.0`
+- SSOT pack contracts `>=0.2.17,<0.3.0`
+
+---
+
+## Verification
+
+### Tests
+
+Run `python -m unittest discover -s tests -v` with the pack installed. The [README workflow](https://github.com/groupsum/cache-freshness-governance-pack/actions/workflows/readme-standards.yml) checks the source README and runs both examples against an installed wheel.
+
+### Certification Status
+
+The pack has no external certification. Downstream adoption requires evidence for the controls an application implements.
+
+### Evidence
+
+See the [README workflow](https://github.com/groupsum/cache-freshness-governance-pack/actions/workflows/readme-standards.yml) for package and documentation verification and the [packaged records](https://github.com/groupsum/cache-freshness-governance-pack/blob/master/src/cache_freshness_governance_pack/templates) for document-level sources.
+
+---
+
+## FAQ
+
+### Why
+
+**Why do document IDs matter?** Downstream records use them to trace an adopted decision or requirement to the pack that owns it.
+
+### How
+
+**How do I preview changes?** Use the registry's pack preflight before approving a sync.
+
+### When
+
+**When should I upgrade?** Read the changelog and preflight the new version against the target registry before applying it.
+
+---
+
+## Documentation and Related Packages
+
+### More Documentation
+
+See the [Pack guide](https://github.com/groupsum/cache-freshness-governance-pack/blob/master/docs/pack-guide.md), [changelog](https://github.com/groupsum/cache-freshness-governance-pack/blob/master/CHANGELOG.md), and [pack metadata](https://github.com/groupsum/cache-freshness-governance-pack/blob/master/src/cache_freshness_governance_pack/metadata.json).
+
+### Related Packages
+
+[SSOT Registry](https://pypi.org/project/ssot-registry/) manages downstream registries. [SSOT Pack Contracts](https://pypi.org/project/ssot-pack-contracts/) provides the shared pack interface.
+
+### Project Links
+
+<!-- readme-standards:begin project-links -->
+- [Homepage](https://github.com/groupsum/cache-freshness-governance-pack)
+- [Issues](https://github.com/groupsum/cache-freshness-governance-pack/issues)
+- [Repository](https://github.com/groupsum/cache-freshness-governance-pack)
+- [pypi: cache-freshness-governance-pack](https://pypi.org/project/cache-freshness-governance-pack/)
+<!-- readme-standards:end project-links -->
+
+---
+
+## Contributing
+
+### How to Contribute
+
+Open an [issue](https://github.com/groupsum/cache-freshness-governance-pack/issues) or pull request describing the affected records, their authority, and the expected downstream effect.
+
+### Development Setup
+
+Install the checkout with `python -m pip install -e .`, then run `python -m unittest discover -s tests -v`. On Python 3.11 or newer, run `uvx --from readme-standards==0.1.3 readme-standards check`.
+
+### Notes for Maintainers
+
+Keep source links, document identifiers, and committed manifest hashes aligned. Run `uvx --from readme-standards==0.1.3 readme-standards render --write` after changing generated README inputs.
+
+---
+
+## Governance
+
+### Ownership and Decision Making
+
+Groupsum maintains `pack:cache-freshness-governance`. The pack's reservation owner is `extension-pack:cache-freshness-governance-pack`. Downstream registry operators approve synchronization.
+
+### Standards and Policies
+
+Review the [governance documentation](https://github.com/groupsum/cache-freshness-governance-pack/blob/master/docs/standards/cache-freshness-rfc-ietf-targets.md) and the primary references carried by the individual records.
+
+### Lifecycle and Migration
+
+Review [release changes](https://github.com/groupsum/cache-freshness-governance-pack/blob/master/CHANGELOG.md) and preflight the chosen version against each downstream registry.
+
+---
+
+## License and Attribution
+
+### License
+
+<!-- readme-standards:begin license -->
+Licensed under `Apache-2.0`. See [LICENSE](https://github.com/groupsum/cache-freshness-governance-pack/blob/master/LICENSE).
+<!-- readme-standards:end license -->
+
+### Notices
+
+<!-- readme-standards:begin notices -->
+No separate NOTICE file is declared. Review the license and bundled third-party attributions.
+<!-- readme-standards:end notices -->
